@@ -1,0 +1,10 @@
+<h1>Albums Results</h1>
+
+
+<% albums.forEach((album) => { %>
+    <div>
+        <h2><%= album.name %></h2>
+        <img src="<%= album.images.map(element=>element.url).splice(0,1)%>" alt="<%= album.name %>">
+        <a href="/tracks/ <%= album.id %>"> Show Tracks</a>
+    </div>
+<% }) %>
